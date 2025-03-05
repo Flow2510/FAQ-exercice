@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "work sans";
+}
+
+.page_container{
+  background-image: url(assets/images/background-pattern-mobile.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-color: hsl(275, 100%, 97%);
+  display: flex;
+}
+
+h1{
+  margin-left: 1rem;
+}
+
+h1, button{
+  color: hsl(292, 42%, 14%);
+}
+
+p{
+  color: hsl(292, 16%, 49%);
+  padding: 0.5rem 1rem;
+}
+
+button{
+  border: none;
+  background-color: white;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  align-items: center;
+}
+
+.card_container{
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: white;
+  width: 80%;
+  max-width: 500px;
+  margin: auto auto;
+}
+
+.accordion{
+  width: 100%;
+  text-align: left;
+  align-self: center;
+  padding: 1rem;
+}
+
+  .panel {
+    display: none;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .accordion:after {
+    content: url(assets/images/icon-plus.svg);
+  }
+
+  .accordion:hover{
+    cursor: pointer;
+    color: hsl(293, 83%, 62%);
+  }
+
+  .active:after {
+    content: url(assets/images/icon-minus.svg);
+  }
+
+  .card_header{
+    display: flex;
+  }
+
+  .card_header img{
+    width: 10%;
+    max-width: 25px;
+  }
+
+  #accordion2{
+    border-top: 1px solid hsl(275, 100%, 97%);
+  }
+
+  #accordion3{
+    border-top: 1px solid hsl(275, 100%, 97%);
+    border-bottom: 1px solid hsl(275, 100%, 97%);
+  }
+
+  @media screen and (min-width:375px) and (max-width:800px) {
+    .page_container{
+      background-image: url(assets/images/background-pattern-desktop.svg);
+      background-size: 200%;
+    }
+  }
+
+  @media screen and (min-width:800px) {
+    .page_container{
+      background-image: url(assets/images/background-pattern-desktop.svg);
+      background-size: contain;
+    }
+  }
